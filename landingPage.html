@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz App</h1>
+        </header>
+
+        <div class="option">
+            <form action="index.html" onsubmit="return validate()">
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your name" class="name"> 
+                <label for="select course">Select course</label>
+                <select name="course" id="course">
+                    <option value="">Select course</option>
+                    <option value="Bible Knowledge" class="bible">Bible Knowledge</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Social Studies">Social Studies</option>
+                </select>
+            </div>
+            <div class="difficulty">
+                <label for="difficulty">Select level:</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Difficult">Difficult</option>
+                </select>
+            </div>
+            <p class="information">
+                this is where the information will be!
+            </p>
+            <button value="Start Quiz" class="start">Start Quiz</button>
+
+        </form>
+    </div>
+
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            background: #dbcfcf;
+            
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .option input, .option select, .difficulty select{
+            display: block;
+            margin-bottom: 12px;
+        }
+        input{
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        label, select{
+            width: 200px;
+        }
+        
+    
+        select > option{
+            color: rgb(65, 83, 65);
+            font-size: 1.1em;
+        }
+        .start{
+            background: rgb(57, 100, 57);
+            outline: none;
+            border: 1px solid green;
+            color: #fff;
+            width: 14vh;
+            font-size: .9em;
+            height: 5vh;
+            border-radius: 40px;
+            transform: translate(110px, 30px)
+        }
+       
+        
+    </style>
+    <script>
+        let nameHolder = document.querySelector('.name');
+        let course = document.getElementById('course');
+        let difficulty = document.querySelector('.difficulty');
+        let start = document.querySelector('.start');
+        let bible = document.querySelector('bible');
+        
+        function validate(){
+            if(nameHolder.textContent.trim() === ""){
+                alert("something else");
+                nameHolder.style.border = "1px solid red";
+                //  let createElement = document.createElement('p');
+                // createElement.textContent = "please input your name to proceed";
+                // nameHolder.appendChild(createElement);
+                return false
+            }
+            else if(course.value === ""){
+            alert("not working")
+
+            }else if(course.children[1].value){
+                alert()
+            }
+
+            else{
+                return true
+            }
+            
+    
+        }
+        
+        // bible.addEventListener('click', function bible(){
+        //     difficulty.style.visibility = "hidden";
+        // });
+        // bible()
+        
+        console.log(course.children)        
+       
+    </script>
+</body>
+</html>

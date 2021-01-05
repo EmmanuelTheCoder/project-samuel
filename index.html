@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <div class="quizhead">
+            <h1 class="header">Quiz App</h1>
+        </div>
+        <div class="information">
+            <p>Welcome! You are about to take 12 questions in 4 minutes, therefore, you need to be as 
+                fast as you possibly can and at the same time endeavor to answer the questions correctly.
+                <span>Please keep in mind that:</span>
+                <ul>
+                    <li>Once you have chosen an answer, you cannot go back to choose another.</li>
+                    <li>Once your time starts, you cannot pause it.</li>
+                    <li>You can take this quiz for as many times as you wish and you'll get served different (new) questions on each occasion.</li>
+                </ul>
+                <!-- <div class="requestDiv">
+                     <span class="request">If you have any question or contribution, <a href="mailto:loyaltysamuel001@gmail.com">kindly write us!</a></span>
+                </div> -->
+               
+                <p class="clickstart">Click the "Start Quiz" button to start. Good Luck!</p>
+            </p>
+            <div class="buttonContainer">
+                <button class="button">Start Quiz</button>
+            </div>
+        </div>
+        
+        
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #f0ecec;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        .requestDiv{
+            margin-bottom: 1rem;
+        }
+        .container{
+            box-shadow: silver 5px 4px 6px 8px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem;
+            border-radius: 40px;
+            position: relative;
+        }
+        .quizhead{
+            text-align: center;
+            color: rgb(235, 65, 65);
+            padding-bottom: 1rem;
+        }
+        .information{
+            padding: .9rem;
+            font-size: 1.1rem;
+            
+        }
+        ul{
+            margin-left: 1rem;
+            margin-top: 1.1rem;
+        }
+        span{
+            text-transform: uppercase;
+            color: red;
+            margin-top: 1rem;
+        }
+        li{
+            padding-bottom: .5rem;
+        }
+        .buttonContainer{
+            text-align: right;
+            margin-right: 1.2rem;
+            margin-top: -1rem;
+            position: absolute;
+        }
+        .button{
+            width: 6rem;
+            height: 2rem;
+            border-radius: 40px;
+            outline: none;
+            font-size: 1rem;
+            background:rgb(230, 31, 31);
+            color: white;
+            margin-bottom: 1.3rem;
+            
+        }
+        .clickstart{
+            padding-bottom: 2rem;
+            font-style: italic;
+            color:rgb(179, 26, 26)
+
+        }
+        .request, .request a{
+            font-size: 1rem;
+            text-transform: lowercase;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".container").slideUp(1000).slideDown(2000, function(){
+                $(".header").fadeOut(1000).fadeIn(1000);
+                $(".buttonContainer").animate({
+                    right: '.9rem'
+
+                },2000, function(){
+                    $(".buttonContainer").css({
+                        position: 'relative',
+                        textAlign: 'right'
+                    })
+                });
+                $(".button").click(function(){
+                    window.location = "Bible.html";
+                });
+            });
+            
+        });
+    </script>
+</body>
+</html>
