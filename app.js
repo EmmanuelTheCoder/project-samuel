@@ -76,7 +76,7 @@ function guess(id, guess){
 function showProgress(){
     let currentQuestionNumber = quiz.questionIndex + 1;
     let element = document.getElementById('progress');
-    element.innerHTML = "Question " + currentQuestionNumber + "of " +  20 //quiz.questions.length;
+    element.innerHTML = "Question " + currentQuestionNumber + " of " +  20 //quiz.questions.length;
 
     if(quiz.questionIndex === 20){
         showScores();
