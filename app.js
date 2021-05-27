@@ -87,7 +87,7 @@ function showProgress(){
 function showScores(){
     //let restart = "<button class='restart' onclick='location.reload()'> Restart </button>";
     let gameOverHtml = "<h1>Result </h1>";
-    gameOverHtml += "<h2 id='score'> Your score: " + quiz.score + " out of " + 12 + "</h2>" + "<button class='restart' onclick='origin()'> Restart </button>" 
+    gameOverHtml += "<h2 id='score'> Your score: " + quiz.score + " out of " + 20 + "</h2>" + "<button class='restart' onclick='origin()'> Restart </button>" 
     //+ "<p class='mailme'>loyaltysamuel001@gmail.com</p>";
 
     let element = document.getElementById('quiz');
