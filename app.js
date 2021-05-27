@@ -1,5 +1,5 @@
 
-let minute = 03;
+let minute = 05;
 let sec = 59;
 let setting = setInterval(function timing(){
     let timer = document.getElementById('timer');
@@ -76,9 +76,9 @@ function guess(id, guess){
 function showProgress(){
     let currentQuestionNumber = quiz.questionIndex + 1;
     let element = document.getElementById('progress');
-    element.innerHTML = "Question " + currentQuestionNumber + "of " +  12 //quiz.questions.length;
+    element.innerHTML = "Question " + currentQuestionNumber + "of " +  20 //quiz.questions.length;
 
-    if(quiz.questionIndex === 12){
+    if(quiz.questionIndex === 20){
         showScores();
     }
 } 
@@ -100,26 +100,57 @@ const origin = () =>{
 }
 
 let questions = [
-    new Question("Durban is a city in which of these countries?", ["Lesotho", "South Africa", "USA", "Canada"], "South Africa"),
-    new Question("America gained her independence in what year?", ["1776", "1676", "1778", "1878"], "1776"),
-    new Question("The first elected President of Nigeria is?", ["Ernest Shonekan", "Olusegun Obasanjo", "Shehu Shagari", "Nnamdi Azikiwe"], "Shehu Shagari"),
-    new Question("Who is the first Nigerian military head of state?", ["Yakubu Gowon", "J.T.U Aguyin Ironsi", "Muhammadu Buhari", "Sani Abacha"], "J.T.U Aguyin Ironsi"),
-    new Question("Which of these personality is on the one dollar bill?", ["Thomas Jefferson", "Abraham Lincoln", "George Bush", "George Washington"], "George Washington"),
-    new Question("In the Nigerian Army, which rank precedes the Brigadier General rank", ["Major General", "Major", "Colonel", "Lieutenant"], "Colonel"),
+    new Question("The way of manipulating data into information is called", ["organizing", "transmission", "storing", "processing"], "processing"),
+    new Question("It is a small piece of text stored on a user's computer by a web browser for maintaining the state. What are we talking about?", ["Session", "Applets", "Cookie", "Application"], "Cookie"),
+    new Question("Which of the following is responsible for the management and coordination of activities and the sharing of the resources of the computer?", ["motherboard", "application software", "RAM", "operating system"], "operating system"),
+    new Question("In computers, what is the smallest and basic unit of information storage?", ["byte", "bit", "megabyte", "kilobyte"], "bit"),
+    new Question("What is the shortcut key of printing a document for computer having windows?", ["shift + PP", "shift + P", "Alt + P", "Ctrl + P"], "Ctrl + P"),
+    new Question("What type of device is a computer keyboard?", ["input", "software", "output", "processing"], "input"),
     new Question("Which of this is the only programming language the browser understands?", ["PHP", "Javascript", "Shell", "Python"], "Javascript"),
     new Question("Which of the is not a Javascript framework/library", ["Angular", "Vue", "Laravel", "React"], "Laravel"),
     new Question("A programming function that calls itself repeatedly is called a ______ function?", ["Iterative", "Recursive", "Hydrative", "Cumultive"], "Recursive"),
-    new Question("What is the capital city of Nigeria", ["Abuja", "Kaduna", "Lokoja", "Lagos"], "Abuja"),
-    new Question("Lugard's rest house is located where?", ["Lokoja, Nigeria", "Yorkshire, London", "Abuja, Nigeria", "Lagos, Nigeria"], "Lokoja, Nigeria"),
-    new Question("what is the name of the chief captain of Abimelech's host present at the treaty with Abraham? ", ["Pichol", "Bashan", "Chesed", "Suelt"], "Pichol"),
-    new Question("The 8th plague that God brought upon the Egyptian is?", ["Blood", "Hail", "Darkness", "Locousts"], "Locousts"),
-    new Question("The name Gershom means?", ["I've been a stranger", "multiple blessings", "new dawn", "the Lord is departed"], "I've been a stranger"),
+    new Question("What type of devices are CDs or DVDs?", ["input", "software", "output", "storage"], "storage"),
+    new Question("Which was the first web browser?", ["WorldWideWeb", "Netscape Navigator", "Safari", "Internet Explorer"], "WorldWideWeb"),
+    new Question("What type of device is a computer monitor?", ["output", "processing", "input", "storage"], "output"),
+    new Question("MP3 file format is associated with what type of files?", ["flash file", "audio", "video", "image"], "audio"),
+    new Question("Which software application is used for accessing sites or information on a network (as the World Wide Web)?", ["Microsoft Excel", "FileZilla", "Operating system", "Web Browser"], "Web Browser"),
     new Question("A place with twelve wells of water, and threescore and ten palm trees was called?", ["Meriba", "Elim", "Moriah", "Halim"], "Elim"),
-    new Question("Who was the first judge in Israel", ["Othniel", "Barak", "Gideon", "Samson"], "Othniel"),
+    new Question("What does BIOS stand for?", ["Basic Input Output System", "Better Integrated Operating System", "Backup Input Output System", "Battery Input Operating System"], "Basic Input Output System"),
     new Question("Which of these companies do not offer cloud services", ["Microsoft","Amazon","Google","Netlify"], "Netlify"),
-    new Question ( "Which place is the coldest in the world?", ["UK", "Canada", "Siberia", "London"], "Siberia"),
-    new Question ( "Who painted the Nigerian flag", ["Femi Adeshina", "Taiwo Akinkunmi", "Taiwo Akinwunmi", "Taiwo Adewunmi"], "Taiwo Akinwunmi"),
-    new Question ( "Who is the first democratically elected president of Nigeria", ["Obasanjo", "Ironsi", "Gowon", "Tinubu"], "Obasanjo"),
+    new Question ("In computers, '.tmp' extension refers usually to what kind of file?", ["temporary file", "text file", "database file", "video file"], "temporary file"),
+    new Question ("One kilobyte contains how many bytes?", ["1001", "1000", "10", "1024"], "1024"),
+    new Question ("What type of devices are computer speakers or headphones?", ["input", "storage", "processing", "output"], "output"),
+    new Question ("Which of the following is not a storage device?", ["mouse", "DVD", "flash drive", "floppy disk"], "mouse"),
+    new Question ("A program that can copy itself and infect a computer without the permission or knowledge of the owner is called what?", ["monitor", "flash", "virus", "Java"], "virus"),
+    new Question ("What type of device is a 31/2 inch floppy disk?", ["input", "output", "storage", "processing"], "storage"),
+    new Question ("What is Windows XP?", ["storage device", "processor", "operating system", "output device"], "operating system"),
+    new Question ("The following are output devices except", ["plotter", "mouse", "printer", "monitor"], "mouse"),
+    new Question ("What are the two broad categories of software?", ["Transaction and System", "Microsoft and Mac OS", "Transaction and Application", "System and Application"], "System and Application"),
+    new Question ("Who owns the Internet?", ["Internet Architecture Board", "No one owns it", "Internet Engineering Task Force", "InterNIC"], "No one owns it"),
+    new Question ("What type of device is a computer printer?", ["output", "input", "software", "processing"], "output"),
+    new Question ("Memory management is a feature of", ["operating system", "operator", "processor", "UPS"], "operating system"),
+    new Question ("What does HTTP stand for?", ["Head Tail Transfer Plot", "Hypertext Transmission Process", "Hypertext Transfer Protocol", "Hypertext Transfer Plotter"], "Hypertext Transfer Protocol"),
+    new Question ("Which of these is a correct format of an email address?", ["contact.website.info", "contact@website@info", "contact.website@info", "contact@website.info"], "contact@website.info"),
+    new Question ("What type of device is a digital camera?", ["input", "processing", "software", "storage"], "input"),
+    new Question ("MS Word is an example of", ["Application Software", "ALU", "System Software", "Operating System"], "Application Software"),
+    new Question ("What type of device is a computer mouse?", ["software", "storage", "output", "input"], "input"),
+    new Question ("Microsoft command based Operating System 'DOS' was created in the year", ["1972", "1968", "1980", "1984"], "1980"),
+    new Question ("Characteristics of a good program include the following EXCEPT", ["readability", "generality", "inefficiency", "accuracy"], "inefficiency"),
+    new Question ("A hexadecimal 'A0' has the decimal value", ["160", "80", "100", "183"], "160"),
+    new Question ("Which of the following generation of computers is referred to as an expert system?", ["Fifth", "First", "Third", "Fourth"], "Fifth"),
+    new Question ("The difference between people with access to computer and internet and those without its knowledge is known as", ["computer programmer", "digital divide", "computer literate", "web master"], "digital divide"),
+    new Question ("The distribution of audio and video contents to a dispersed audience through a digital transmission media is called", ["translating", "converting", "broadcasting", "authenticating"], "broadcasting"),
+    new Question ("In Microsoft Excel, a new work space is created with the name __ by default.", ["book 1", "excel 1", "mybook 1", "sheet 1"], "book 1"),
+    new Question ("In the e-mail address deardammy@gmail.com, 'deardammy' is the ___ name.", ["user", "server", "host", "client"], "user"),
+    new Question ("The ___ displays the content of the active cell in Microsoft Excel.", ["title bar", "row heading", "formular bar", "task pane"], "formular bar"),
+    new Question ("A computer system without an Operating System is useless, this is because Operating System is", ["a program that manages computer hardware and software", "a microprocessor", "embedded in the motherboard", "an antivirus agent"], "a program that manages computer hardware and software"),
+    new Question ("A wireless network uses ____ waves to transmit signal.", ["electrical", "radio", "magnetic", "sound"], "radio"),
+    new Question ("ALU carries out __ between numbers, letters and special characters.", ["comparisons", "debugging", "harmonization", "demarcations"], "comparisons"),
+    new Question ("Which of the following are constituents of a computer system?", ["Hardware and software", "data and info", "softcopy and hardcopy", "input and output"], "Hardware and software"),
+    new Question ("The acronym CPU stands for", ["Computer Programming Unit", "Computer Processing Unit", "Central Programming Unit", "Central Processing Unit"], "Central Processing Unit"),
+    new Question ("The following are output devices except:", ["mouse", "plotter", "monitor", "printer"], "mouse"),
+    new Question ("What type of devices are computer speakers or headphones?", ["processing", "input", "storage", "output"], "output"),
+
     
 
     //  new Question("what is the name of the chief captain of Abimelech's host present at the treaty with Abraham? ", ["Pichol", "Bashan", "Chesed", "Suelt"], "Pichol"),
